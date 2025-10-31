@@ -5,7 +5,7 @@
     <input class="form-control mb-3" type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= contactoBD.nombre %>">
 
     <label>Edad</label>
-    <input class="form-control mb-3" type="text" name="edad" id="edad" placeholder="Edad" value="<% contactoBD.edad %>">
+<input class="form-control mb-3" type="text" name="edad" id="edad" placeholder="Edad" value=<%= contactoBD.edad %>>
     <button type="submit" class="btn btn-primary">Actualizar datos</button>
   </form>
 <%- include("templates/pie.ejs") %>
@@ -18,21 +18,4 @@
 
 
 
-
-
-<%- include("templates/encabezado.ejs", { titulo: "Editar Contacto" }) %>
-
-   <%- include("templates/encabezado.ejs", { titulo: "Contáctanos" }) %>
-
-<form action="/editarcontacto" id="formulario" method="POST">
-
-<label>Nombre</label>
-<input class="form-control mb-3" type="text" name="nombre" id="nombre"
-plac der="Nombre" value="<%= contactoBD.nombre %>">
-<label>Edad</label>
-<input class="form-control mb-3" type="text" name="edad" id="edad" placeholder="Edad" value=<%= contactoBD.edad %>
-<button type= "submit" class="btn btn-primary" >Enviar datos</button>
-</form>
-
-<%-include("templates/pie.ejs")%>
 
