@@ -38,7 +38,7 @@ router.post("/contactanos", async function(req, res) {
   var edad = req.body.edad;
   console.log("Nombre :" + nombre + "Edad" + edad);
   await nuevoContacto(req.body)
-  res.render("Respuesta", {nombre,edad});
+  res.render("respuesta", {nombre,edad});
 });
 
 router.get("/mostrarcontactos", async function (req, res) {
