@@ -56,10 +56,15 @@ router.get("/editarContacto/:id", async function (req, res) {
 res.render("editarContacto", {contactoBD});
   
 })
+
 router.post("/editarContacto", async function(req, res){
- console.log (respuestaMongo)
- 
-res.redirect("/mostrarContactos")})
+  const { id, nombre, edad } = req.body; // obtén los datos del formulario
+  const respuestaMongo = await editarContacto({ id, nombre, edad }); // llama a la función
+  console.log(respuestaMongo);
+  res.redirect("/mostrarcontactos"); // redirige a la lista actualizada
+});
+
+
 
 router.get("/borrar/:id", async function (req,res){
   const id=req.params.id
